@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import AddTodos from './AddTodos';
 
-function App() {
+export default function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper > 
+      <AddTodos/>
+    </AppWrapper>
   );
 }
 
-export default App;
+
+
+const AppWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100%;
+
+  display: flex;
+  justify-content: center;
+  background-color: rgb(249, 222, 86);
+
+`;
