@@ -29,13 +29,22 @@ const UnorderedList = styled.ul`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-`
+  padding: 0;
+
+  @media screen and (max-width: 700px) {
+   margin-top: 0rem;
+  }
+`;
 const ListItem = styled.li`
   display: flex;
   justify-content: flex-start;
   width: 90%;
   flex-direction: row;
   border-bottom: 1px dotted lightgrey;
+  
+  @media screen and (max-width: 700px) {
+   width: 100%; 
+  }
 `;
 
 const Input = styled.input.attrs({
@@ -75,9 +84,14 @@ const Label = styled.label`
   background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
+
+
 `;
 
 const Div = styled.div`
   margin-left: 2rem;
   padding: 1rem 0;
+  @media screen and (max-width: 700px) {
+    margin-left: 1rem;
+  }
 `;
