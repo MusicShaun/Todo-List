@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {useState, useEffect, useRef, component} from 'react'; 
+import {useState, useEffect, useRef } from 'react'; 
 import Todos from './Todos';
 import { v4 as uuidv4 } from 'uuid';
 
