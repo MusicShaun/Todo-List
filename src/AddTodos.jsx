@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import {useState, useEffect, useRef} from 'react'; 
+import {useState, useEffect, useRef, component} from 'react'; 
 import Todos from './Todos';
 import { v4 as uuidv4 } from 'uuid';
+
 
 export default function AddTodos() {
 
   const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')) || []);
-  //
   const getTodoName = useRef(); 
 
   useEffect(() => {
@@ -44,10 +44,10 @@ export default function AddTodos() {
 
   return (<>
     <Wrapper>
-      <H1>Simple To-do</H1>
+      <H1>My To-do's</H1>
 
       <AddForm>
-        <Input type='text' ref={getTodoName}/>
+        <Input type='text' ref={getTodoName} autoFocus/>
         <Buttons>
           <Button onClick={handleAddToDo}>Submit</Button>
           <Button onClick={handleDelete}>Delete</Button>
@@ -79,10 +79,9 @@ const Wrapper = styled.div`
 const H1 = styled.h1`
   text-align: center;
   font-size: 3rem;
-  padding: 0 0 1.6rem;
-  margin: 1rem;
+  padding: 0;
+  margin: 1rem 1rem 0rem 1rem;
   width: 90%;
-  border-bottom: 1px dotted lightgrey;
   text-decoration: underline;
   color: #343332;
 `;
@@ -98,6 +97,11 @@ const Input = styled.input`
   border: 1px solid grey;
   border-radius: 10px;
   font-size: 1.4rem;
+
+  @media screen and (max-width: 700px) {
+    padding: 0.3rem;
+    font-size: 1.1rem;
+  }
 `;
 const Buttons = styled.div`
   display: flex;
