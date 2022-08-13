@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export default function Todos({todo, handleCheck}) {
 
-
   return (
-
     <UnorderedList >
 
       {todo.map((todo, index) => {
@@ -21,7 +19,7 @@ export default function Todos({todo, handleCheck}) {
           </ListItem>
         )}
           )
-        }
+      }
     </UnorderedList>  
   ) 
 }

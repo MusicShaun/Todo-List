@@ -5,7 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function AddTodos() {
 
-  const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')));
+  const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')), []);
+  //
   const getTodoName = useRef(); 
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function AddTodos() {
 
   function handleCheck(e) {
     const newState = todo.map((obj) => {
-       return obj.id == e.target.id ? {...obj, checking: !obj.checking } : { ...obj};
+       return obj.id === e.target.id ? {...obj, checking: !obj.checking } : { ...obj};
     });
     setTodo(newState);
   };
@@ -36,6 +37,7 @@ export default function AddTodos() {
       if (obj.checking === false) {
         return {...obj};
       } 
+      return null;
     })
     setTodo(newState)
   }
