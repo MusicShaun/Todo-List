@@ -13,7 +13,6 @@ export default function AddTodos() {
   }, [todo])
   
  
-
   function handleAddToDo(e) {
     e.preventDefault();
     const name = getTodoName.current.value; 
@@ -41,8 +40,6 @@ export default function AddTodos() {
     setTodo(newState)
   }
 
-
-
   return (<>
     <Wrapper>
       <H1>Simple To-do</H1>
@@ -55,19 +52,14 @@ export default function AddTodos() {
         </Buttons>
       </AddForm>
 
-
       <Todos todo={todo}
         handleCheck={handleCheck} 
         >     
       </Todos>
 
-
     </Wrapper>
   </>)
 }
-
-
-
 
 const Wrapper = styled.div`
   margin-top: 5%;

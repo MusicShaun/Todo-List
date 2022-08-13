@@ -3,15 +3,12 @@ import AddTodos from './AddTodos';
 
 export default function App() {
 
-
   return (
     <AppWrapper > 
       <AddTodos/>
     </AppWrapper>
   );
 }
-
-
 
 const AppWrapper = styled.div`
   position: absolute;
@@ -23,5 +20,4 @@ const AppWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgb(249, 222, 86);
-
 `;
