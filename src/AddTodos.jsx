@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function AddTodos() {
 
-  const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')), []);
+  const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')) || []);
   //
   const getTodoName = useRef(); 
 
