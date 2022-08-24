@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {useState, useEffect, useRef } from 'react'; 
 import Todos from './Todos';
 import { v4 as uuidv4 } from 'uuid';
-
+import {device} from './device';
 
 export default function AddTodos() {
 
@@ -62,19 +62,22 @@ export default function AddTodos() {
     </Wrapper>
   </>)
 }
-
 const Wrapper = styled.div`
   margin-top: 5%;
   margin-bottom: 5%;
   width: 80%;
   min-height: 85%;
-
   border-radius: 25px;
   background-color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  @media screen and ${device.mobile} {
+    max-width: 90%;
+  }
+  @media screen and ${device.tablet} { 
+    max-width: 50%;
+  }
 `;
 const H1 = styled.h1`
   text-align: center;
