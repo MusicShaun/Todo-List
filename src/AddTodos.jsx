@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {useState, useEffect, useRef } from 'react'; 
 import Todos from './Todos';
 import { v4 as uuidv4 } from 'uuid';
-import {device} from './device';
+import {device, fontsize} from './device';
 
 export default function AddTodos() {
 
@@ -82,7 +82,7 @@ const Wrapper = styled.div`
 `;
 const H1 = styled.h1`
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   padding: 0;
   margin: 1rem 1rem 0rem 1rem;
   width: 90%;
@@ -95,7 +95,7 @@ const H1 = styled.h1`
     font-size: 2.5rem;
   }
   ${device.desktop} { 
-    font-size: 4rem;
+    font-size: 3rem;
   }
 `;
 const AddForm = styled.form`
@@ -109,20 +109,20 @@ const Input = styled.input`
   padding: 0.6rem;
   border: 1px solid grey;
   border-radius: 10px;
-  font-size: 2rem;
+  font-size: ${fontsize.desktopL};
 
   @media screen and (max-width: 700px) {
     padding: 0.3rem;
     font-size: 1.1rem;
   }
   ${device.mobile} {
-    font-size: 1rem;
+    font-size: ${fontsize.mobile};
   }
   ${device.tablet} { 
-    font-size: 1.4rem;
+    font-size: ${fontsize.tablet};
   }
   ${device.desktop} { 
-    font-size: 1.8rem;
+    font-size: ${fontsize.desktop};
   }
 `;
 const Buttons = styled.div`
@@ -134,32 +134,31 @@ const Buttons = styled.div`
 const Button = styled.button`
   margin: 1rem;
   background-color: rgb(249, 222, 86);
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 75px;
   border: 1px solid grey;
   border-radius: 16px;
   transition: 0.1s ease-out;
-  font-size: 2rem;
+  font-size: ${fontsize.desktopL};
   ${device.mobile} {
-    font-size: 1rem;
+    font-size: ${fontsize.mobile};
     width: 100px;
-  height: 50px;
+    height: 50px;
   }
   ${device.tablet} { 
-    font-size: 1.4rem;
-    width: 140px;
-  height: 70px;
+    font-size: ${fontsize.tablet};
+    width: 110px;
+    height: 50px;
   }
   ${device.desktop} { 
-    font-size: 1.8rem;
-    width: 180px;
-  height: 90px;
+    font-size: ${fontsize.desktop};
+    width: 130px;
+    height: 60px;
   }
   cursor: pointer;
   &:hover {
     transition: 0.1s ease-out;
     font-weight: bold;
-    font-size: 1.1rem;
     background-color: rgba(249, 242, 86, 1);
   }
   :active {

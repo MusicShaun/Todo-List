@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from './device';
+import { device , fontsize} from './device';
 
 export default function Todos({todo, handleCheck}) {
 
@@ -96,12 +96,12 @@ const Div = styled.div`
     margin-left: 1rem;
   }
   ${device.mobile} {
-    font-size: 1rem;
+    font-size: ${fontsize.mobile};
   }
   ${device.tablet} { 
-    font-size: 1.4rem;
+    font-size: ${fontsize.tablet};
   }
   ${device.desktop} { 
-    font-size: 2rem;
+    font-size: ${fontsize.desktop};
   }
 `;

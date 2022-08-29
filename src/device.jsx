@@ -11,3 +11,11 @@ export const device = {
   desktop: `@media screen and (min-width: ${size.desktop})`,
   desktopL: `@media screen and (min-width: ${size.desktopL})`,
 }
+
+export const fontsize = {
+  mobile: '1rem',
+  tablet: '1.2rem',
+  desktop: '1.5rem',
+  desktopL: '2rem'
+
+}
