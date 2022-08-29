@@ -82,7 +82,7 @@ const Wrapper = styled.div`
 `;
 const H1 = styled.h1`
   text-align: center;
-  font-size: 6rem;
+  font-size: 4.5rem;
   padding: 0;
   margin: 1rem 1rem 0rem 1rem;
   width: 90%;
@@ -92,10 +92,10 @@ const H1 = styled.h1`
     font-size: 2rem;
   }
   ${device.tablet} { 
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   ${device.desktop} { 
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 `;
 const AddForm = styled.form`
@@ -109,7 +109,7 @@ const Input = styled.input`
   padding: 0.6rem;
   border: 1px solid grey;
   border-radius: 10px;
-  font-size: 2.6rem;
+  font-size: 2rem;
 
   @media screen and (max-width: 700px) {
     padding: 0.3rem;
@@ -119,10 +119,10 @@ const Input = styled.input`
     font-size: 1rem;
   }
   ${device.tablet} { 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   ${device.desktop} { 
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 `;
 const Buttons = styled.div`
@@ -139,19 +139,19 @@ const Button = styled.button`
   border: 1px solid grey;
   border-radius: 16px;
   transition: 0.1s ease-out;
-  font-size: 2.5rem;
+  font-size: 2rem;
   ${device.mobile} {
     font-size: 1rem;
     width: 100px;
   height: 50px;
   }
   ${device.tablet} { 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 140px;
   height: 70px;
   }
   ${device.desktop} { 
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     width: 180px;
   height: 90px;
   }

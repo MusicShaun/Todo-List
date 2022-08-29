@@ -99,9 +99,9 @@ const Div = styled.div`
     font-size: 1rem;
   }
   ${device.tablet} { 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   ${device.desktop} { 
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `;
