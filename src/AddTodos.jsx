@@ -22,6 +22,7 @@ export default function AddTodos() {
       return [...prevTodo, {id: uuidv4(), name:name, checking:false}]
     })
     getTodoName.current.value = null;
+    getTodoName.current.focus();
   }
 
   function handleCheck(e) {
