@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './device';
 
 export default function Todos({todo, handleCheck}) {
 
@@ -93,5 +94,14 @@ const Div = styled.div`
   padding: 1rem 0;
   @media screen and (max-width: 700px) {
     margin-left: 1rem;
+  }
+  ${device.mobile} {
+    font-size: 1rem;
+  }
+  ${device.tablet} { 
+    font-size: 1.5rem;
+  }
+  ${device.desktop} { 
+    font-size: 2.4rem;
   }
 `;

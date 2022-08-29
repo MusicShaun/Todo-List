@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import AddTodos from './AddTodos';
+import TriangleCanvas from './animatedBackground/TriangleCanvas';
 
 export default function App() {
 
   return (
     <AppWrapper > 
+    <TriangleCanvas />
       <AddTodos/>
     </AppWrapper>
   );

@@ -72,21 +72,31 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media screen and ${device.mobile} {
+  z-index: 3;
+  ${device.mobile} {
     max-width: 90%;
   }
-  @media screen and ${device.tablet} { 
+  ${device.tablet} { 
     max-width: 50%;
   }
 `;
 const H1 = styled.h1`
   text-align: center;
-  font-size: 3rem;
+  font-size: 6rem;
   padding: 0;
   margin: 1rem 1rem 0rem 1rem;
   width: 90%;
   text-decoration: underline;
   color: #343332;
+  ${device.mobile} {
+    font-size: 2rem;
+  }
+  ${device.tablet} { 
+    font-size: 3rem;
+  }
+  ${device.desktop} { 
+    font-size: 4.5rem;
+  }
 `;
 const AddForm = styled.form`
   display: flex;
@@ -99,11 +109,20 @@ const Input = styled.input`
   padding: 0.6rem;
   border: 1px solid grey;
   border-radius: 10px;
-  font-size: 1.4rem;
+  font-size: 2.6rem;
 
   @media screen and (max-width: 700px) {
     padding: 0.3rem;
     font-size: 1.1rem;
+  }
+  ${device.mobile} {
+    font-size: 1rem;
+  }
+  ${device.tablet} { 
+    font-size: 1.5rem;
+  }
+  ${device.desktop} { 
+    font-size: 2.4rem;
   }
 `;
 const Buttons = styled.div`
@@ -115,12 +134,27 @@ const Buttons = styled.div`
 const Button = styled.button`
   margin: 1rem;
   background-color: rgb(249, 222, 86);
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
   border: 1px solid grey;
   border-radius: 16px;
   transition: 0.1s ease-out;
-  font-size: 1rem;
+  font-size: 2.5rem;
+  ${device.mobile} {
+    font-size: 1rem;
+    width: 100px;
+  height: 50px;
+  }
+  ${device.tablet} { 
+    font-size: 1.5rem;
+    width: 140px;
+  height: 70px;
+  }
+  ${device.desktop} { 
+    font-size: 2.2rem;
+    width: 180px;
+  height: 90px;
+  }
   cursor: pointer;
   &:hover {
     transition: 0.1s ease-out;
