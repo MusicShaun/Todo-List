@@ -68,6 +68,13 @@ const Input = styled.input.attrs({
     width: 7px;
     transform: rotate(45deg);
     top: 5px;
+    ${device.mobile}{
+      border-bottom: 2px white solid;
+      border-right: 2px white solid;
+      height: 12px;
+      width: 4px;
+
+  }
   }
 `;
 const Label = styled.label`
@@ -77,15 +84,29 @@ const Label = styled.label`
   align-items: center;
   margin: 0.5rem 0;
   max-width: 30px;
-  min-width: 30px;
+  width: 30px;
   max-height: 30px;
-  min-height: 30px;
+  height: 30px;
   padding: 3px;
   border-radius: 50%;
   background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
-
+  ${device.mobile}{
+    width: 20px;
+    height: 20px;
+    margin: 0.25rem 0;
+  }
+  ${device.tablet}{
+    width: 25px;
+    height: 25px;
+    margin: 0.4rem 0;
+  }
+  ${device.desktop}{
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem 0;
+  }
 
 `;
 
@@ -97,11 +118,14 @@ const Div = styled.div`
   }
   ${device.mobile} {
     font-size: ${fontsize.mobile};
+    padding: 0.5rem 0;
   }
   ${device.tablet} { 
     font-size: ${fontsize.tablet};
+    padding: 0.75rem 0;
   }
   ${device.desktop} { 
     font-size: ${fontsize.desktop};
+    padding: 0.75rem 0;
   }
 `;
