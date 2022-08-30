@@ -4,8 +4,8 @@ import Todos from './Todos';
 import { v4 as uuidv4 } from 'uuid';
 import {device, fontsize} from './device';
 
-export default function AddTodos() {
-
+export default function AddTodos(props) {
+  const { onlyHeight } = props;
   const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('list')) || []);
   const getTodoName = useRef(); 
 
@@ -44,7 +44,7 @@ export default function AddTodos() {
   }
 
   return (<>
-    <Wrapper>
+    <Wrapper   style={{minHeight: `${0.85 * onlyHeight}%`}}>
       <H1>My To-do's</H1>
 
       <AddForm>
@@ -67,7 +67,6 @@ const Wrapper = styled.div`
   margin-top: 5%;
   margin-bottom: 5%;
   width: 80%;
-  min-height: 85%;
   border-radius: 25px;
   background-color: white;
   display: flex;
