@@ -24,4 +24,5 @@ const AppWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgb(249, 222, 86);
+  overflow: hidden auto;
 `;
