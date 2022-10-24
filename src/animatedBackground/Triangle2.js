@@ -12,7 +12,6 @@ export default function Triangle2(props) {
 
     gsap.to(tri2Ref.current, { 
       duration: 40,
-      repeat: -1,
       y: -1600,
       delay: "random(0, 40)",
       repeat: -1,
