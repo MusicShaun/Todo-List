@@ -6,7 +6,7 @@ import { useRef, useEffect } from 'react';
 export default function Triangle2(props) {
 
   const {position, fieldX,size,} = props; 
-  const triRef= useRef(null)
+  const tri2Ref= useRef(null)
 
   useEffect(() => {
     console.log(triRef)
@@ -22,7 +22,7 @@ export default function Triangle2(props) {
 
 
   return (
-  <Wrapper ref={triRef} 
+  <Wrapper ref={tri2Ref} 
   style={{left: `${position[0]}%`, top: `${position[1]}%`}}>
 
     <Xrotation style={{transformOrigin: `${fieldX}px ${(fieldX/15)*13}px`,
