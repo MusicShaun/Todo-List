@@ -9,8 +9,8 @@ export default function Triangle2(props) {
   const tri2Ref= useRef(null)
 
   useEffect(() => {
-    console.log(triRef)
-    gsap.to(triRef.current, { 
+
+    gsap.to(tri2Ref.current, { 
       duration: 40,
       repeat: -1,
       y: -1600,

@@ -8,8 +8,8 @@ export default function Triangle3(props) {
   const tri3Ref= useRef(null)
 
   useEffect(() => {
-    console.log(triRef)
-    gsap.to(triRef.current, { 
+
+    gsap.to(tri3Ref.current, { 
       duration: 30,
       repeat: -1,
       y: -1600,
