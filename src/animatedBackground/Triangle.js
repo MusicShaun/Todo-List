@@ -11,10 +11,10 @@ export default function Triangle(props) {
   useEffect(() => {
     console.log(triRef)
     gsap.to(triRef.current, { 
-      duration: 40,
+      duration: 50,
       repeat: -1,
       y: -1600,
-      delay: "random(0, 40)",
+      delay: "random(0, 50)",
       repeat: -1,
       ease: Linear
     })
