@@ -9,8 +9,8 @@ export default function App() {
 
   return (
     <AppWrapper style={{ minHeight: `${onlyHeight}px`}}> 
-    <TriangleCanvas />
-      <AddTodos onlyHeight={onlyHeight}/>
+      <TriangleCanvas />
+      {/* <AddTodos onlyHeight={onlyHeight}/> */}
     </AppWrapper>
   );
 }

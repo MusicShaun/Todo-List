@@ -1,15 +1,30 @@
 import styled from 'styled-components';
-
+import { gsap, Linear } from 'gsap';
+import { useRef, useEffect } from 'react'; 
 
 
 export default function Triangle(props) {
 
   const {position, fieldX , size,} = props; 
+  const triRef= useRef(null)
 
+  useEffect(() => {
+    console.log(triRef)
+    gsap.to(triRef.current, { 
+      duration: 40,
+      repeat: -1,
+      y: -1600,
+      delay: "random(0, 40)",
+      repeat: -1,
+      ease: Linear
+    })
+  }, [])
 
 
   return (
-  <Wrapper style={{left: `${position[0]}%`, top: `${position[1]}%`}}>
+  <Wrapper ref={triRef}
+
+  style={{left: `${position[0]}%`, top: `${position[1]}%`}}>
     <Xrotation style={{transformOrigin: `${fieldX}px ${(fieldX/15)*13}px`,
                         width: `${fieldX}px`, height: `${(fieldX/15)*13}px`}}>
         <Yrotation style={{transformOrigin: `${fieldX}px ${(fieldX/15)*13}px`,
